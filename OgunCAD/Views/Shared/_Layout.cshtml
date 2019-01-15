@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta name="robots" content="noindex, nofollow" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OgunCAD</title>
@@ -13,9 +14,20 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129594978-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129594978-2');
+    </script>
+
 </head>
 <body>
     <header>
@@ -32,16 +44,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        </li>*@
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <partial name="_CookieConsentPartial" />
+        @*<partial name="_CookieConsentPartial" />*@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -49,7 +61,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - OgunCAD - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2019 - OgunCAD @*- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
         </div>
     </footer>
 
