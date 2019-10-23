@@ -60,3 +60,8 @@ body {
     max-width: 1170px !important;
     margin: auto;
 }
+
+span.reverse {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
